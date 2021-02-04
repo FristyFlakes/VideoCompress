@@ -60,7 +60,7 @@ async def incoming_start_message_f(bot, update):
             if user.status == "kicked":
                await bot.send_message(
                    chat_id=update.chat.id,
-                   text="Sorry Sir, You are Banned to use me. Contact my [Support Group](https://t.me/linux_repo).",
+                   text="**Sorry Sir, You Are Banned From Using Me. Contact My** [Support Bot](https://t.me/FlixHelpBot).",
                    parse_mode="markdown",
                    disable_web_page_preview=True
                )
@@ -72,7 +72,7 @@ async def incoming_start_message_f(bot, update):
                 reply_markup=InlineKeyboardMarkup(
                     [
                         [
-                            InlineKeyboardButton("Join Updates Channel", url=f"https://t.me/{update_channel}")
+                            InlineKeyboardButton("Join Updates Channel 📢", url=f"https://t.me/{update_channel}")
                         ]
                     ]
                 ),
@@ -82,7 +82,7 @@ async def incoming_start_message_f(bot, update):
         except Exception:
             await bot.send_message(
                 chat_id=update.chat.id,
-                text="Something went Wrong. Contact my [Support Group](https://t.me/linux_repo).",
+                text="**Something Went Wrong. Contact My** [Support Bot](https://t.me/FlixHelpBot).",
                 parse_mode="markdown",
                 disable_web_page_preview=True)
             return
@@ -92,10 +92,10 @@ async def incoming_start_message_f(bot, update):
         reply_markup=InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton('Updates Channel', url='https://t.me/Discovery_Updates')
+                    InlineKeyboardButton('Updates Channel 📢', url='https://t.me/FlixBots')
                 ],
                 [
-                    InlineKeyboardButton('Support Group', url='https://t.me/linux_repo')
+                    InlineKeyboardButton('Support Bot 🙎', url='https://t.me/FlixHelpBot')
                 ]
             ]
         ),
@@ -113,7 +113,7 @@ async def incoming_compress_message_f(bot, update):
           if user.status == "kicked":
              await bot.send_message(
                  chat_id=update.chat.id,
-                 text="Sorry Sir, You are Banned to use me. Contact my [Support Group](https://t.me/linux_repo).",
+                 text="**Sorry Sir, You Are Banned From Using Me. Contact My** [Support Bot](https://t.me/FlixHelpBot).",
                  parse_mode="markdown",
                  disable_web_page_preview=True
              )
@@ -121,11 +121,11 @@ async def incoming_compress_message_f(bot, update):
       except UserNotParticipant:
           await bot.send_message(
               chat_id=update.chat.id,
-              text="**Please Join My Updates Channel to use this Bot!**",
+              text="**Please Join My Updates Channel Below To Use This Bot!**",
               reply_markup=InlineKeyboardMarkup(
                   [
                       [
-                          InlineKeyboardButton("Join Updates Channel", url=f"https://t.me/{update_channel}")
+                          InlineKeyboardButton("Join Our Updates Channel 📢", url=f"https://t.me/{update_channel}")
                       ]
                   ]
               ),
@@ -135,7 +135,7 @@ async def incoming_compress_message_f(bot, update):
       except Exception:
           await bot.send_message(
               chat_id=update.chat.id,
-              text="Something went Wrong. Contact my [Support Group](https://t.me/linux_repo).",
+              text="**Something Went Wrong. Contact My [Support Bot](https://t.me/FlixHelpBot).",
               parse_mode="markdown",
               disable_web_page_preview=True
           )
@@ -234,7 +234,7 @@ async def incoming_compress_message_f(bot, update):
         reply_markup=InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton('Show Bot Status', url=f'https://t.me/{LOG_CHANNEL}') # This will be username na ...
+                    InlineKeyboardButton('🥳 Bot Status 🥳', url='https://t.me/CompressFlixLogs') # Replace With Your's
                 ]
             ]
         ),
@@ -259,7 +259,7 @@ async def incoming_compress_message_f(bot, update):
         bst_now = utc_now + datetime.timedelta(minutes=00, hours=6)
         bst = bst_now.strftime("%d/%m/%Y, %H:%M:%S")
         now = f"\n{ist} (GMT+05:30)`\n`{bst} (GMT+06:00)"
-        await bot.send_message(chat_id, f"**Download Failed, Bot is Free Now !!** \n\nProcess Done at `{now}`", parse_mode="markdown")
+        await bot.send_message(chat_id, f"**Download Failed ❌**\n\n**Bot Status : Free  🟢**\n\n➤ @CompressFlixBot\n\n**Process Stopped At** `{now}`", parse_mode="markdown")
         await download_start.delete()
       except:
           pass          
@@ -278,7 +278,7 @@ async def incoming_compress_message_f(bot, update):
     bst = bst_now.strftime("%d/%m/%Y, %H:%M:%S")
     now = f"\n{ist} (GMT+05:30)`\n`{bst} (GMT+06:00)"
     await download_start.delete()
-    compress_start = await bot.send_message(chat_id, f"**Compressing Video ...** \n\nProcess Started at `{now}`", parse_mode="markdown")
+    await bot.send_message(chat_id, f"**Video Compressing Started\n\nBot Status : Busy Now  🔴**\n\n➤ @CompressFlixBot\n\n**A Process Started At** `{now}`", parse_mode="markdown")
     await sent_message.edit_text(                    
       text=Localisation.COMPRESS_START                    
     )
