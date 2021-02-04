@@ -6,38 +6,37 @@ from bot.get_cfg import get_config
 
 
 class Localisation:
-    START_TEXT = "Hello, \n\nThis is a Telegram <b>Video Compress Bot</b>. \n\n<b>Please send me any Telegram big video file I will compress it as s small video file!</b> \n\n/help for more details. \n\nSupport Group: @Linux_Repo"
-   
-    ABS_TEXT = " Please don't be selfish."
+    START_TEXT = "<b>Hello, My Name Is 𝗖𝗢𝗠𝗣𝗥𝗘𝗦𝗦 𝗙𝗟𝗜𝗫 𝗕𝗢𝗧 🥳.\n\nI'm A <u>𝗩𝗜𝗗𝗘𝗢 𝗖𝗢𝗠𝗣𝗥𝗘𝗦𝗦𝗢𝗥 𝗕𝗢𝗧</u>\n\nSend Me Any 𝗧𝗲𝗹𝗲𝗴𝗿𝗮𝗺 𝗩𝗶𝗱𝗲𝗼 Be It 𝗗𝗼𝗰𝘂𝗺𝗲𝗻𝘁/𝗦𝘁𝗿𝗲𝗮𝗺𝗮𝗯𝗹𝗲 & I'll 𝗖𝗼𝗺𝗽𝗿𝗲𝘀𝘀 It & Resend You A Smaller Packed Size. \n\nSee /help For More Information\n\n❌ 𝗬𝗢𝗨 𝗖𝗔𝗡 𝗢𝗡𝗟𝗬 𝗣𝗘𝗥𝗙𝗢𝗥𝗠 <u>𝗢𝗡𝗘 𝗢𝗣𝗘𝗥𝗔𝗧𝗜𝗢𝗡</u> 𝗧𝗢 𝗔𝗩𝗢𝗜𝗗 𝗕𝗢𝗧 𝗢𝗩𝗘𝗥𝗟𝗢𝗔𝗗.\n\n𝗦𝘂𝗯𝘀𝗰𝗿𝗶𝗯𝗲 𝗧𝗼 @FlixBots 𝗙𝗼𝗿 𝗠𝗼𝗿𝗲 𝗘𝘅𝗰𝗶𝘁𝗶𝗻𝗴 𝗕𝗼𝘁𝘀</b>"
+    ABS_TEXT = "Please Don't Be Selfish."
     
-    FORMAT_SELECTION = "Select the desired format: <a href='{}'>file size might be approximate</a> \nIf you want to set custom thumbnail, send photo before or quickly after tapping on any of the below buttons.\nYou can use /deletethumbnail to delete the auto-generated thumbnail."
+    FORMAT_SELECTION = "Select The Desired Format: <a href='{}'>file size might be approximate</a> \nIf You Want To Set Custom Thumbnail, Send A Photo Before Or Quickly After Tapping On Any Of The Below Buttons.\nYou Can Use /deletethumbnail To Delete The Auto-Generated Thumbnail."
     
     
-    DOWNLOAD_START = "📥 Downloading ... 📥 \n"
+    DOWNLOAD_START = "<b>𝗗𝗼𝘄𝗻𝗹𝗼𝗮𝗱𝗶𝗻𝗴 𝗩𝗶𝗱𝗲𝗼 𝗧𝗼 𝗠𝘆 𝗦𝗲𝗿𝘃𝗲𝗿 𝗡𝗼𝘄 📁</b>\n"
     
-    UPLOAD_START = "📤 Uploading ... 📤 \n"
+    UPLOAD_START = "<b>𝗨𝗽𝗹𝗼𝗮𝗱𝗶𝗻𝗴 𝗧𝗵𝗲 𝗩𝗶𝗱𝗲𝗼 𝗧𝗼 𝗧𝗲𝗹𝗲𝗴𝗿𝗮𝗺 𝗡𝗼𝘄 🌐</b>\n"
     
-    COMPRESS_START = "📀 Trying to compress ... 📀"
+    COMPRESS_START = "<b>𝗖𝗼𝗺𝗽𝗿𝗲𝘀𝘀𝗶𝗻𝗴 𝗧𝗵𝗲 𝗩𝗶𝗱𝗲𝗼 𝗡𝗼𝘄.. 📀</b>"
     
     RCHD_BOT_API_LIMIT = "size greater than maximum allowed size (50MB). Neverthless, trying to upload."
     
     RCHD_TG_API_LIMIT = "Downloaded in {} seconds.\nDetected File Size: {}\nSorry. But, I cannot upload files greater than 1.95GB due to Telegram API limitations."
     
-    COMPRESS_SUCCESS = "📥 Downloaded in {}\n\n📀 Compressed in {}\n\n📤 Uploaded in {}\n\nBy @Discovery_Updates"
+    COMPRESS_SUCCESS = "<b>📁 𝗗𝗼𝘄𝗻𝗹𝗼𝗮𝗱𝗲𝗱 𝗜𝗻 {}</b>\n\n<b>📀 𝗖𝗼𝗺𝗽𝗿𝗲𝘀𝘀𝗲𝗱 𝗜𝗻 {}</b>\n\n<b>🌐 𝗨𝗽𝗹𝗼𝗮𝗱𝗲𝗱 𝗜𝗻 {}</b>\n\n𝗦𝘂𝗯𝘀𝗰𝗿𝗶𝗯𝗲 𝗧𝗼 @FlixBots 𝗙𝗼𝗿 𝗠𝗼𝗿𝗲 𝗘𝘅𝗰𝗶𝘁𝗶𝗻𝗴 𝗕𝗼𝘁𝘀"
 
-    COMPRESS_PROGRESS = "⏳ ETA: {}\n🚀 Progress: {}%"
+    COMPRESS_PROGRESS = "<b>𝗘𝗧𝗔 :</b> {}\n<b>𝗣𝗿𝗼𝗴𝗿𝗲𝘀𝘀 :</b> {}%"
 
     SAVED_CUSTOM_THUMB_NAIL = "Custom video / file thumbnail saved. This image will be used in the video / file."
     
-    DEL_ETED_CUSTOM_THUMB_NAIL = "✅ Custom thumbnail cleared succesfully."
+    DEL_ETED_CUSTOM_THUMB_NAIL = "Custom Thumbnail Cleared Succesfully. ❌"
     
-    FF_MPEG_DEL_ETED_CUSTOM_MEDIA = "✅ Media cleared succesfully."
+    FF_MPEG_DEL_ETED_CUSTOM_MEDIA = "Media Cleared Succesfully. ❌"
     
-    SAVED_RECVD_DOC_FILE = "✅ Downloaded Successfully."
+    SAVED_RECVD_DOC_FILE = "𝗠𝗲𝗱𝗶𝗮 𝗗𝗼𝘄𝗻𝗹𝗼𝗮𝗱𝗲𝗱 𝗦𝘂𝗰𝗰𝗲𝘀𝘀𝗳𝘂𝗹𝗹𝘆 📩."
     
     CUSTOM_CAPTION_UL_FILE = " "
     
-    NO_CUSTOM_THUMB_NAIL_FOUND = "No Custom ThumbNail found."
+    NO_CUSTOM_THUMB_NAIL_FOUND = "No Custom ThumbNail Found. 😒"
     
     NO_VOID_FORMAT_FOUND = "no-one gonna help you\n{}"
     
@@ -47,7 +46,7 @@ class Localisation:
     
     HELP_MESSAGE = get_config(
         "STRINGS_HELP_MESSAGE",
-        "Hi, I am Video Compressor Bot \n\n1. Send me your telegram big video file \n2. Reply to the file with: `/compress 50` \n\nSupport Group: @Linux_Repo"
+        "<b><u>More Help & Commands!</u>\n\n<u>Convert To Video</u>\n➠ Send Me Any Telegram File Or Video.\n➠ Reply To That Message With /compress (percentage) Command. Example /compress 50\n\n𝗦𝘂𝗯𝘀𝗰𝗿𝗶𝗯𝗲 𝗧𝗼 @FlixBots 𝗙𝗼𝗿 𝗠𝗼𝗿𝗲 𝗘𝘅𝗰𝗶𝘁𝗶𝗻𝗴 𝗕𝗼𝘁𝘀</b>"
     )
     WRONG_MESSAGE = get_config(
         "STRINGS_WRONG_MESSAGE",
