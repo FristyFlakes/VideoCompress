@@ -109,7 +109,7 @@ async def convert_video(video_file, output_directory, total_time, bot, message, 
             ''.join([UN_FINISHED_PROGRESS_STR for i in range(10 - math.floor(percentage / 10))])
             )
         stats = f'{progress_str}\n' \
-                f'\n<b>𝗖𝗼𝗺𝗽𝗿𝗲𝘀𝘀𝗶𝗻𝗴 :</b> {target_percentage}%\n\n' \
+                f'\n<b>𝗖𝗼𝗺𝗽𝗿𝗲𝘀𝘀𝗶𝗻𝗴 :</b>\n\n' \
                 f'<b>𝗘𝗧𝗔 :</b> {ETA}\n\n'
         try:
           await message.edit_text(
