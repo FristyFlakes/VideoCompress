@@ -170,7 +170,7 @@ async def incoming_compress_message_f(bot, update):
     bst_now = utc_now + datetime.timedelta(minutes=00, hours=6)
     bst = bst_now.strftime("%d/%m/%Y, %H:%M:%S")
     now = f"\n{ist} (GMT+05:30)`\n`{bst} (GMT+06:00)"
-    download_start = await bot.send_message(chat_id, f"**Video Compressing Started\n\nBot Status : Busy Now  🔴**\n\n➤ @HEVCCompressBot\n\n**A Process Started At** `{now}`", parse_mode="markdown")
+    download_start = await bot.send_message(chat_id, f"**Video Compressing Started\n\nBot Status : Busy Now  🔴**\n\n➤ @CompressHEVCVideoBot\n\n**A Process Started At** `{now}`", parse_mode="markdown")
     try:
       d_start = time.time()
       status = DOWNLOAD_LOCATION + "/status.json"
@@ -205,7 +205,7 @@ async def incoming_compress_message_f(bot, update):
           bst_now = utc_now + datetime.timedelta(minutes=00, hours=6)
           bst = bst_now.strftime("%d/%m/%Y, %H:%M:%S")
           now = f"\n{ist} (GMT+05:30)`\n`{bst} (GMT+06:00)"
-          await bot.send_message(chat_id, f"**Download Stopped ❌\n\nBot Status : Free  🟢**\n\n➤ @HEVCCompressBot\n\n**Process Stopped At** `{now}`", parse_mode="markdown")
+          await bot.send_message(chat_id, f"**Download Stopped ❌\n\nBot Status : Free  🟢**\n\n➤ @CompressHEVCVideoBot\n\n**Process Stopped At** `{now}`", parse_mode="markdown")
           await download_start.delete()
         except:
           pass
@@ -259,7 +259,7 @@ async def incoming_compress_message_f(bot, update):
         bst_now = utc_now + datetime.timedelta(minutes=00, hours=6)
         bst = bst_now.strftime("%d/%m/%Y, %H:%M:%S")
         now = f"\n{ist} (GMT+05:30)`\n`{bst} (GMT+06:00)"
-        await bot.send_message(chat_id, f"**Download Failed ❌**\n\n**Bot Status : Free  🟢**\n\n➤ @HEVCCompressBot\n\n**Process Stopped At** `{now}`", parse_mode="markdown")
+        await bot.send_message(chat_id, f"**Download Failed ❌**\n\n**Bot Status : Free  🟢**\n\n➤ @CompressHEVCVideoBot\n\n**Process Stopped At** `{now}`", parse_mode="markdown")
         await download_start.delete()
       except:
           pass          
@@ -278,7 +278,7 @@ async def incoming_compress_message_f(bot, update):
     bst = bst_now.strftime("%d/%m/%Y, %H:%M:%S")
     now = f"\n{ist} (GMT+05:30)`\n`{bst} (GMT+06:00)"
     await download_start.delete()
-    compress_start = await bot.send_message(chat_id, f"**Video Compressing Started 🍀\n\nBot Status : Busy Now  🔴**\n\n➤ @HEVCCompressBot\n\n**A Process Started At** `{now}`", parse_mode="markdown")
+    compress_start = await bot.send_message(chat_id, f"**Video Compressing Started 🍀\n\nBot Status : Busy Now  🔴**\n\n➤ @CompressHEVCVideoBot\n\n**A Process Started At** `{now}`", parse_mode="markdown")
     await sent_message.edit_text(                    
       text=Localisation.COMPRESS_START                    
     )
@@ -304,7 +304,7 @@ async def incoming_compress_message_f(bot, update):
       bst = bst_now.strftime("%d/%m/%Y, %H:%M:%S")
       now = f"\n{ist} (GMT+05:30)`\n`{bst} (GMT+06:00)"
       await compress_start.delete()
-      upload_start = await bot.send_message(chat_id, f"**Uploaded Started 🟡**\n\n**Bot Status : Free  🟢**\n\n➤ @HEVCCompressBot\n\n**Process Done At** `{now}`", parse_mode="markdown")
+      upload_start = await bot.send_message(chat_id, f"**Uploaded Started 🟡**\n\n**Bot Status : Free  🟢**\n\n➤ @CompressHEVCVideoBot\n\n**Process Done At** `{now}`", parse_mode="markdown")
       await sent_message.edit_text(                    
         text=Localisation.UPLOAD_START,                    
       )
@@ -338,7 +338,7 @@ async def incoming_compress_message_f(bot, update):
           bst_now = utc_now + datetime.timedelta(minutes=00, hours=6)
           bst = bst_now.strftime("%d/%m/%Y, %H:%M:%S")
           now = f"\n{ist} (GMT+05:30)`\n`{bst} (GMT+06:00)"
-          await bot.send_message(chat_id, f"**Upload Stopped ❌**\n\n**Bot Status : Free  🟢**\n\n➤ @HEVCCompressBot\n\n**Process Stopped At** `{now}`", parse_mode="markdown")
+          await bot.send_message(chat_id, f"**Upload Stopped ❌**\n\n**Bot Status : Free  🟢**\n\n➤ @CompressHEVCVideoBot\n\n**Process Stopped At** `{now}`", parse_mode="markdown")
           await upload_start.delete()
         except:
           pass
@@ -355,7 +355,7 @@ async def incoming_compress_message_f(bot, update):
       bst = bst_now.strftime("%d/%m/%Y, %H:%M:%S")
       now = f"\n{ist} (GMT+05:30)`\n`{bst} (GMT+06:00)"
       await upload_start.delete()
-      await bot.send_message(chat_id, f"**Uploaded Successfully 🎦**\n\n**Bot Status : Free  🟢**\n\n➤ @HEVCCompressBot\n\n**Process Done At** `{now}`", parse_mode="markdown")
+      await bot.send_message(chat_id, f"**Uploaded Successfully 🎦**\n\n**Bot Status : Free  🟢**\n\n➤ @CompressHEVCVideoBot\n\n**Process Done At** `{now}`", parse_mode="markdown")
       LOGGER.info(upload.caption);
       try:
         await upload.edit_caption(
@@ -371,7 +371,7 @@ async def incoming_compress_message_f(bot, update):
         )
         chat_id = LOG_CHANNEL
         now = datetime.datetime.now()
-        await bot.send_message(chat_id, f"**Compression Failed 📀**\n\n**Bot Status : Free  🟢**\n\n➤ @HEVCCompressBot\n\n**Process Stopped At** `{now}`", parse_mode="markdown")
+        await bot.send_message(chat_id, f"**Compression Failed 📀**\n\n**Bot Status : Free  🟢**\n\n➤ @CompressHEVCVideoBot\n\n**Process Stopped At** `{now}`", parse_mode="markdown")
         await download_start.delete()
       except:
         pass
@@ -389,7 +389,7 @@ async def incoming_compress_message_f(bot, update):
       bst_now = utc_now + datetime.timedelta(minutes=00, hours=6)
       bst = bst_now.strftime("%d/%m/%Y, %H:%M:%S")
       now = f"\n{ist} (GMT+05:30)`\n`{bst} (GMT+06:00)"
-      await bot.send_message(chat_id, f"**Download Error ‼️**\n\n**Bot Status : Free  🟢**\n\n➤ @HEVCCompressBot\n\n**Process Stopped At** `{now}`", parse_mode="markdown")
+      await bot.send_message(chat_id, f"**Download Error ‼️**\n\n**Bot Status : Free  🟢**\n\n➤ @CompressHEVCVideoBot\n\n**Process Stopped At** `{now}`", parse_mode="markdown")
       await download_start.delete()
     except:
       pass
