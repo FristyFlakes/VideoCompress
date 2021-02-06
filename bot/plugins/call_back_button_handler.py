@@ -63,7 +63,7 @@ async def button(bot, update: CallbackQuery):
                         bst_now = utc_now + datetime.timedelta(minutes=00, hours=6)
                         bst = bst_now.strftime("%d/%m/%Y, %H:%M:%S")
                         now = f"\n{ist} (GMT+05:30)`\n`{bst} (GMT+06:00)"
-                        await bot.send_message(chat_id, f"**Task Cancelled ❌\n\nBot Status : Free  🟢**\n\n➤ @CompressHEVCBot\n\n**Process Stopped At** `{now}`", parse_mode="markdown")
+                        await bot.send_message(chat_id, f"**Task Cancelled ❌\n\nBot Status : Free  🟢**\n\n➤ @HEVCCompressBot\n\n**Process Stopped At** `{now}`", parse_mode="markdown")
                     except:
                         pass
             else:
